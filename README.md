@@ -33,7 +33,7 @@ Contract ID: `CAU2YHMVF6UIDI7JM3WSGRQFTBH25C5IPQYIP4MKOGK2F7RXERG3NB74`
 
 Explorer / deploy screenshot:
 
-![Explorer screenshot](docs/deployed_screenshot.svg)
+![Explorer screenshot](docs/deployed_screenshot.png)
 
 (Replace the image above with a real block-explorer screenshot if available.)
 
