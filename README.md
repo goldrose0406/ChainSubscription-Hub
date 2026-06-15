@@ -22,7 +22,7 @@ A simple escrow contract with these main functions:
 
 ## Build & Deploy (Soroban Studio)
 1. Open the project in Soroban Studio.
-2. In the `contracts/hello-world` workspace click `Build Contract`.
+2. In the `contracts/escrow-contract` workspace click `Build Contract`.
 3. In the Deploy panel upload or select the built wasm and click `Deploy Contract`.
 4. Sign with Freighter on Testnet.
 5. After deploy copy the `Contract ID` and the deploy transaction hash.
