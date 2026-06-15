@@ -11,7 +11,7 @@ This repository contains a Soroban smart contract implementing a simple escrow (
 - refund: <paste refund tx hash here>
 
 ## Files
-- Source contract: [contracts/hello-world/src/lib.rs](contracts/hello-world/src/lib.rs#L1-L200)
+- Source contract: [contracts/escrow-contract/src/lib.rs](contracts/escrow-contract/src/lib.rs#L1-L200)
 - Frontend: [stellar-dapp/frontend/app.js](stellar-dapp/frontend/app.js)
 
 ## Description
@@ -59,3 +59,19 @@ soroban contract invoke \
 ---
 
 Prepared for submission. If you want I can now add the transaction hashes (if you paste them) and update the frontend file.
+
+## Project Vision
+
+Build a minimal, auditable escrow contract on Soroban to demonstrate secure fund custody and controlled release/refund flows mediated by a designated arbiter.
+
+## Key Features
+
+- Initialize escrow between buyer, seller, and arbiter with a specified token/amount.
+- Controlled release: only buyer or arbiter can release funds to seller.
+- Refund by arbiter to return funds to buyer in dispute.
+
+## Future Scope
+
+- Implement token approval/transfer_from flow and tests.
+- Add access control and event logging for better auditability.
+- Build frontend UI for end-to-end UX and automated test scripts.
