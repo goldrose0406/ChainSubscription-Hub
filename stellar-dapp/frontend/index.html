@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Stellar Soroban dApp — Counter</title>
+    <style>
+      body{font-family:Arial,Helvetica,sans-serif;margin:24px;background:#0f172a;color:#e6eef8}
+      .card{background:#111827;padding:18px;border-radius:8px;max-width:700px}
+      button{margin:6px}
+      #tx{word-break:break-all}
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Counter dApp (Stellar Soroban)</h2>
+      <div>Wallet: <span id="wallet">not connected</span></div>
+      <div>Value: <span id="value">-</span></div>
+      <div style="margin-top:12px">
+        <button id="connect">Connect Wallet</button>
+        <button id="init">Init(0)</button>
+        <button id="inc">Increment</button>
+        <button id="get">Get Value</button>
+      </div>
+      <div style="margin-top:12px">Last tx: <div id="tx">-</div></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
