@@ -1,0 +1,17 @@
+# Rust
+target/
+**/*.rs.bk
+**/Cargo.lock
+
+# Soroban builds
+/**/*.wasm
+
+# Node
+node_modules/
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
