@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200">
+  <rect width="100%" height="100%" fill="#0b1226"/>
+  <text x="20" y="40" fill="#fff" font-size="18">Block Explorer Screenshot (placeholder)</text>
+  <text x="20" y="80" fill="#9fb3ff" font-size="14">Contract ID: CAU2YHMVF6UIDI7JM3WSGRQFTBH25C5IPQYIP4MKOGK2F7RXERG3NB74</text>
+  <rect x="18" y="100" width="764" height="70" fill="#0f2140" stroke="#274060"/>
+  <text x="30" y="140" fill="#cfe0ff" font-size="12">Replace this image with a real block-explorer screenshot for final submission.</text>
+</svg>

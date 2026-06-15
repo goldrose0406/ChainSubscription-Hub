@@ -27,6 +27,16 @@ A simple escrow contract with these main functions:
 4. Sign with Freighter on Testnet.
 5. After deploy copy the `Contract ID` and the deploy transaction hash.
 
+## Deployed Contract Details
+
+Contract ID: `CAU2YHMVF6UIDI7JM3WSGRQFTBH25C5IPQYIP4MKOGK2F7RXERG3NB74`
+
+Explorer / deploy screenshot:
+
+![Explorer screenshot](docs/deployed_screenshot.svg)
+
+(Replace the image above with a real block-explorer screenshot if available.)
+
 ## Invoke (Soroban Studio)
 1. In `DEPLOYED CONTRACTS` select the deployed contract (Testnet, Freighter).
 2. Under `WRITE` choose function `initialize` and fill arguments:
