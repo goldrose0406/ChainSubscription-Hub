@@ -1,36 +1,27 @@
 #![no_std]
+use soroban_sdk::{contract, contractimpl, Env, Address};
 
-use soroban_sdk::{contractimpl, symbol_short, Env, Address};
-
-pub struct CounterOwner;
+#[contract]
+pub struct EscrowContract;
 
 #[contractimpl]
-impl CounterOwner {
-    // Initialize counter + owner
-    pub fn init(env: Env, owner: Address, start: i128) {
-        env.storage().set(&symbol_short!("owner"), &owner);
-        env.storage().set(&symbol_short!("count"), &start);
+impl EscrowContract {
+    // Khởi tạo hợp đồng ký thác giữa các bên
+    pub fn initialize(env: Env, buyer: Address, seller: Address, arbiter: Address, token: Address, amount: i128) {
+        // Lưu thông tin các bên và số tiền cần ký thác vào Storage
     }
 
-    // Only owner can set the counter
-    pub fn set(env: Env, v: i128) {
-        let caller: Address = env.invoker();
-        let owner: Address = env.storage().get(&symbol_short!("owner")).unwrap();
-        if caller != owner {
-            panic!("only owner");
-        }
-        env.storage().set(&symbol_short!("count"), &v);
+    // Giải ngân tiền cho người bán (Chỉ Người mua hoặc Trọng tài được gọi)
+    pub fn release(env: Env, caller: Address) {
+        caller.require_auth();
+        // Kiểm tra xem caller có phải là Buyer hoặc Arbiter không
+        // Nếu đúng, sử dụng Token Client để chuyển tiền từ Contract sang Seller
     }
 
-    // Increment by 1 (anyone)
-    pub fn inc(env: Env) {
-        let key = symbol_short!("count");
-        let cur: i128 = env.storage().get(&key).unwrap_or(0);
-        env.storage().set(&key, &(cur + 1));
-    }
-
-    // Read the counter
-    pub fn get(env: Env) -> i128 {
-        env.storage().get(&symbol_short!("count")).unwrap_or(0)
+    // Hoàn tiền cho người mua nếu giao dịch thất bại (Chỉ Trọng tài được gọi)
+    pub fn refund(env: Env, arbiter: Address) {
+        arbiter.require_auth();
+        // Kiểm tra xem caller có đúng là Arbiter không
+        // Chuyển tiền từ Contract ngược lại cho Buyer
     }
 }
