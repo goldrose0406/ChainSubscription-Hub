@@ -11,3 +11,6 @@ soroban-sdk = "25"
 
 [package.metadata]
 authors = ["You <you@example.com>"]
+
+[profile.release]
+overflow-checks = true
